@@ -6,6 +6,14 @@ After('@logout') do
 end
 
 
+After do |cenario|
+    nome_cenario = cenario.name.gsub(/[A^~Za-z0-9 ]/, '')
+    nome_cenario = cenario.name.gsub(' ','_').downcase!
+    screenshot = "log/screenshots/#{nome_cenario}.png"
+    page.save_screenshot(screenshot)
+end
+
+
 # Before
 # BeforeSteps
 # AfterSteps

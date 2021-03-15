@@ -7,14 +7,14 @@
 
     Dado('que eu acesso a pagina principal') do                                    
         visit 'http://localhost:5000/'
-        sleep(2)
+        sleep(1)
     end                                                                            
                                                                                  
     Quando('eu faço login com {string} e {string}') do |email, senha| 
         @email = email          
         login = LoginPage.new
         login.faz_login(email, senha)
-        sleep(3)
+        sleep(1)
     end                                                                            
                                                                                  
     Então('devo ser autenticado com sucesso') do                                   
