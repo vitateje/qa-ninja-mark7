@@ -12,9 +12,8 @@
                                                                                  
     Quando('eu faço login com {string} e {string}') do |email, senha| 
         @email = email          
-        find('input[name=email]').set email
-        find('#login_password').set senha
-        click_button 'Login'
+        login = LoginPage.new
+        login.faz_login(email, senha)
         sleep(3)
     end                                                                            
                                                                                  
