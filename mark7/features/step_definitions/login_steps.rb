@@ -15,7 +15,7 @@
         find('input[name=email]').set email
         find('#login_password').set senha
         click_button 'Login'
-        sleep 10
+        sleep(3)
     end                                                                            
                                                                                  
     Então('devo ser autenticado com sucesso') do                                   
