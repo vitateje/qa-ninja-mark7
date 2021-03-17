@@ -14,7 +14,7 @@
         @email = email          
         login = LoginPage.new
         login.faz_login(email, senha)
-        sleep(1)
+        sleep(2)
     end                                                                            
                                                                                  
     Então('devo ser autenticado com sucesso') do                                   
